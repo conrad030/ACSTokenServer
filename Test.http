@@ -1,1 +1,4 @@
 GET http://localhost:8080/token?identifier=8:acs:7d8a86e0-5ac4-4d37-a9dd-dabf1f99e29b_00000010-f151-b7f6-59fe-ad3a0d0093c9
+
+###
+GET https://acs-token-server.herokuapp.com/token
