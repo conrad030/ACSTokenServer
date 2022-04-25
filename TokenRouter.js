@@ -7,6 +7,7 @@ const {
 const connectionString =
   process.env["COMMUNICATION_SERVICES_CONNECTION_STRING"];
 const identityClient = new CommunicationIdentityClient(connectionString);
+console.log(connectionString);
 
 //Create or refresh an access token
 router.get("/", async function (req, res) {
