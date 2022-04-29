@@ -20,6 +20,7 @@ router.get("/", async function (req, res) {
 
   try {
     let tokenResponse = await identityClient.getToken(identityResponse, [
+      "chat",
       "voip",
     ]);
 
