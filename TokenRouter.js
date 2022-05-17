@@ -8,7 +8,6 @@ const middleware = require("./Middleware");
 const connectionString =
   process.env["COMMUNICATION_SERVICES_CONNECTION_STRING"];
 const identityClient = new CommunicationIdentityClient(connectionString);
-print;
 
 //Create or refresh an access token
 router.get("/", middleware.checkApiKey, async function (req, res) {
