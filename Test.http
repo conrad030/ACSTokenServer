@@ -1,4 +1,5 @@
-GET http://localhost:8080/token?identifier=8:acs:7d8a86e0-5ac4-4d37-a9dd-dabf0f99e29b_00000010-ffd1-ca50-65f0-ad3a0d00d47e
+GET http://localhost:8080/token
+API-Key: Try
 
 ###
 GET https://acs-token-server.herokuapp.com/token

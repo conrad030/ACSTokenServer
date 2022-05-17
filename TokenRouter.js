@@ -3,14 +3,15 @@ var router = express.Router();
 const {
   CommunicationIdentityClient,
 } = require("@azure/communication-identity");
+const middleware = require("./Middleware");
 
 const connectionString =
   process.env["COMMUNICATION_SERVICES_CONNECTION_STRING"];
 const identityClient = new CommunicationIdentityClient(connectionString);
-console.log(connectionString);
+print;
 
 //Create or refresh an access token
-router.get("/", async function (req, res) {
+router.get("/", middleware.checkApiKey, async function (req, res) {
   let identityResponse = null;
   if (req.query.identifier) {
     identityResponse = { communicationUserId: req.query.identifier };
