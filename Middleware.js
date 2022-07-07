@@ -3,8 +3,6 @@ function checkApiKey(req, res, next) {
   if (!apiKey) {
     return res.status(403).json({ message: "Missing API Key" });
   }
-  console.log(apiKey);
-  console.log(process.env.API_KEY);
   if (apiKey === process.env.API_KEY) {
     next();
   } else {
